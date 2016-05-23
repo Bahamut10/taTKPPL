@@ -1,0 +1,14 @@
+Nama Scrum Master : Kenedy Lukito
+NIM    	 	  : 14.111.0043
+Tanggal		  : 23 Mei 2016
+
+1. Kemarin mengerjakan apa?
+ = Tugas baru dimulai pada tanggal 23 Mei 2016 sehingga progress baru 	 dimulai pada hari ini.
+
+2. Apa yang akan dikerjakan hari ini?
+ = a. Menentukan Judul Presentasi
+   b. Merancang alur kerja quiz
+   c. Merancang hubungan quiz dengan Othelo
+
+3. Ada masalah dalam pengerjaan tugas?
+ = Ya. Terjadi sedikit permasalahan dalam meng-handle waktu pengerjaan tugas karena masih baru dalam pemakaian git sedangkan setiap anggota tim diharuskan melakukan push setiap hari
