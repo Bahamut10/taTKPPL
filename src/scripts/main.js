@@ -37,10 +37,18 @@ $("#judul").click(function(){
   }
 });
 
-window.addEventListener("keydown", tekantombol, false);
+document.addEventListener("keydown", tekantombol, false);
 
 function tekantombol(e){
   if(e.keyCode=="65"){
-    
+    var chutsia = $("#chutsia")[0];
+    chutsia.play();
+    }
+  
+  if(e.keyCode=="16"){
+    $("#pertama").css("background","blue");
+  }
+  if(e.keyCode=="17"){
+    $("#pertama").css("background","red");
   }
 }
