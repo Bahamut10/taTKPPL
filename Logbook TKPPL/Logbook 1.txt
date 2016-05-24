@@ -12,3 +12,21 @@ Tanggal		  : 23 Mei 2016
 
 3. Ada masalah dalam pengerjaan tugas?
  = Ya. Terjadi sedikit permasalahan dalam meng-handle waktu pengerjaan tugas karena masih baru dalam pemakaian git sedangkan setiap anggota tim diharuskan melakukan push setiap hari
+
+
+Nama Scrum Master : Kenedy Lukito
+NIM    	 	  : 14.111.0043
+Tanggal		  : 24 Mei 2016
+
+1. Kemarin mengerjakan apa?
+ = a. Menentukan Judul Presentasi
+   b. Merancang alur kerja quiz
+   c. Merancang hubungan quiz dengan Othelo
+
+2. Apa yang akan dikerjakan hari ini?
+ = a. Merancang halaman Judul Presentasi
+   b. Merancang halaman WELCOME
+   c. Merancang sistem rebut soal
+
+3. Ada masalah dalam pengerjaan tugas?
+ = Tidak ada
