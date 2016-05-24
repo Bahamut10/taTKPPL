@@ -44,11 +44,16 @@ function tekantombol(e){
     var chutsia = $("#chutsia")[0];
     chutsia.play();
     }
-  
+  //reset warna
+  if(e.keyCode=="39" || e.keyCode=="37"){
+    $(".jawab").css("background-color","rgb(234, 234, 234)");
+  }
+
   if(e.keyCode=="16"){
-    $("#pertama").css("background","blue");
+    $(".jawab").css("background-color","blue");
   }
   if(e.keyCode=="17"){
-    $("#pertama").css("background","red");
+    $(".jawab").css("background-color","red");
   }
+
 }
