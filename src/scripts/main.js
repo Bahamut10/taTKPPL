@@ -1,6 +1,5 @@
 // Require Node modules in the browser thanks to Browserify: http://browserify.org
 var bespoke = require('bespoke'),
-  cube = require('bespoke-theme-cube'),
   keys = require('bespoke-keys'),
   touch = require('bespoke-touch'),
   bullets = require('bespoke-bullets'),
@@ -8,11 +7,15 @@ var bespoke = require('bespoke'),
   scale = require('bespoke-scale'),
   hash = require('bespoke-hash'),
   progress = require('bespoke-progress'),
-  forms = require('bespoke-forms');
-
+  forms = require('bespoke-forms'),
+  build = require('bespoke-theme-build-wars');	
+  nebula = require('bespoke-theme-nebula')
+  voltaire = require('bespoke-theme-voltaire')
 // Bespoke.js
 bespoke.from('article', [
-  cube(),
+  nebula(),
+  //voltaire(),
+  //build(),
   keys(),
   touch(),
   bullets('li, .bullet'),
