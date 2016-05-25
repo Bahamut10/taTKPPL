@@ -28,22 +28,9 @@ bespoke.from('article', [
 // debowerify: https://github.com/eugeneware/debowerify
 require('prism');
 
-$("#judul").click(function(){
-  if(document.getElementById("judul").style.color=="blue"){
-    $(this).css("color","red");
-  }
-  else{
-    $(this).css("color","blue");
-  }
-});
-
 document.addEventListener("keydown", tekantombol, false);
 
 function tekantombol(e){
-  if(e.keyCode=="65"){
-    var chutsia = $("#chutsia")[0];
-    chutsia.play();
-    }
   //reset warna
   if(e.keyCode=="39" || e.keyCode=="37"){
     $(".jawab").css("background-color","rgb(234, 234, 234)");
@@ -51,9 +38,11 @@ function tekantombol(e){
 
   if(e.keyCode=="16"){
     $(".jawab").css("background-color","blue");
+    e.preventDefault();
   }
-  if(e.keyCode=="17"){
+  else if(e.keyCode=="17"){
     $(".jawab").css("background-color","red");
+    e.preventDefault();
   }
 
 }
