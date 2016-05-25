@@ -30,19 +30,23 @@ require('prism');
 
 document.addEventListener("keydown", tekantombol, false);
 
+var flag = 0;
+
 function tekantombol(e){
+  var lokasi = window.location.href;
   //reset warna
   if(e.keyCode=="39" || e.keyCode=="37"){
     $(".jawab").css("background-color","rgb(234, 234, 234)");
+    flag = 0;
   }
 
-  if(e.keyCode=="16"){
+  if(e.keyCode=="16" && flag==0){
     $(".jawab").css("background-color","blue");
-    e.preventDefault();
+    flag = 1;
   }
-  else if(e.keyCode=="17"){
+  if(e.keyCode=="17" && flag==0){
     $(".jawab").css("background-color","red");
-    e.preventDefault();
+    flag = 1;
   }
 
 }
