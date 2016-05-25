@@ -30,3 +30,25 @@ Tanggal		  : 24 Mei 2016
 
 3. Ada masalah dalam pengerjaan tugas?
  = Tidak ada
+
+
+Nama Scrum Master : Felix Hartanto
+NIM    	 	  : 14.111.3333
+Tanggal		  : 25 Mei 2016
+
+1. Kemarin mengerjakan apa?
+ = a. Merancang halaman Judul Presentasi
+   b. Merancang halaman WELCOME
+   c. Merancang sistem rebut soal
+
+2. Apa yang akan dikerjakan hari ini?
+ = a. Merancang CSS halaman WELCOME dan Judul
+   b. Menggunakan jquery.min.js dan memperbaikki sesuatu
+   c. Melakukan perbaikkan syntax jade
+   d. Memperbaikki sistem rebut soal
+   e. Melakukan penggantian theme dengan gabungan BuildWars, Voltaire dan Nebula
+   f. Mengubah penjelasan QThello
+   g. Merancang halaman pembuka presentasi
+
+3. Ada masalah dalam pengerjaan tugas?
+ = Tidak ada
