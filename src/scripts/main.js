@@ -16,9 +16,9 @@ var bespoke = require('bespoke'),
 // Bespoke.js
 bespoke.from('article', [
   //cube(),
-  build(),
+  //build(),
   nebula(),
-  voltaire(),
+  //voltaire(),
   keys(),
   touch(),
   bullets('li, .bullet'),
@@ -41,46 +41,62 @@ var flag1 = 0;
 var counter = 0;
 var lokasi;
 
+var othello = new Array(8);
+for(var i=0; i<8; i++){
+  othello[i] = new Array(8);
+  for(var j=0; j<8; j++){
+    othello[i][j] = '_';
+  }
+}
+
+
 function tekantombol(e){
   lokasi = window.location.href;
-  //reset warna
+  //reset warna //arrow-left or arrow-right
   if(e.keyCode=="39" || e.keyCode=="37"){
     $(".jawab").css("background-color","rgb(234, 234, 234)");
     flag = 0;
     flag1 = 0;
+    counter = 0;
   }
-
-  if(e.keyCode=="16" && flag==0){
+  //shift
+  if(e.keyCode == "16" && flag == 0){
     $(".jawab").css("background-color","blue");
     flag = 1;
   }
-  if(e.keyCode=="17" && flag==0){
+  //ctrl
+  if(e.keyCode == "17" && flag == 0){
     $(".jawab").css("background-color","red");
     flag = 1;
   }
-  if(lokasi=="http://localhost:8080/#6" && flag1==0){
-    $("section").eq(5).addClass("oneline").empty()
-    .append("| <b>_</b> | <b>_</b> | <b>_</b> | <b>_</b> | <b>_</b> | <b>_</b> | <b>_</b> | <b>_</b> | <br>")
-    .append("| <b>_</b> | <b>_</b> | <b>_</b> | <b>_</b> | <b>_</b> | <b>_</b> | <b>_</b> | <b>_</b> | <br>")
-    .append("| <b>_</b> | <b>_</b> | <b>_</b> | <b>_</b> | <b>_</b> | <b>_</b> | <b>_</b> | <b>_</b> | <br>")
-    .append("| <b>_</b> | <b>_</b> | <b>_</b> | <b>_</b> | <b>_</b> | <b>_</b> | <b>_</b> | <b>_</b> | <br>")
-    .append("| <b>_</b> | <b>_</b> | <b>_</b> | <b>_</b> | <b>_</b> | <b>_</b> | <b>_</b> | <b>_</b> | <br>")
-    .append("| <b>_</b> | <b>_</b> | <b>_</b> | <b>_</b> | <b>_</b> | <b>_</b> | <b>_</b> | <b>_</b> | <br>")
-    .append("| <b>_</b> | <b>_</b> | <b>_</b> | <b>_</b> | <b>_</b> | <b>_</b> | <b>_</b> | <b>_</b> | <br>")
-    .append("| <b>_</b> | <b>_</b> | <b>_</b> | <b>_</b> | <b>_</b> | <b>_</b> | <b>_</b> | <b>_</b> | <br>")
-    .append("| <b>_</b> | <b>_</b> | <b>_</b> | <b>_</b> | <b>_</b> | <b>_</b> | <b>_</b> | <b>_</b> | ");
+  //block mouse right-click
+  $("section").bind("contextmenu", function(ev){
+    ev.preventDefault();
+    return false;
+  });
+  if(lokasi == "http://localhost:8080/#8" && flag1 == 0){
+    $("section#othello > div").empty()
+    .append("|<b>_</b>|<b>_</b>|<b>_</b>|<b>_</b>|<b>_</b>|<b>_</b>|<b>_</b>|<b>_</b>|<br>")
+    .append("|<b>_</b>|<b>_</b>|<b>_</b>|<b>_</b>|<b>_</b>|<b>_</b>|<b>_</b>|<b>_</b>|<br>")
+    .append("|<b>_</b>|<b>_</b>|<b>_</b>|<b>_</b>|<b>_</b>|<b>_</b>|<b>_</b>|<b>_</b>|<br>")
+    .append("|<b>_</b>|<b>_</b>|<b>_</b>|<b>_</b>|<b>_</b>|<b>_</b>|<b>_</b>|<b>_</b>|<br>")
+    .append("|<b>_</b>|<b>_</b>|<b>_</b>|<b>_</b>|<b>_</b>|<b>_</b>|<b>_</b>|<b>_</b>|<br>")
+    .append("|<b>_</b>|<b>_</b>|<b>_</b>|<b>_</b>|<b>_</b>|<b>_</b>|<b>_</b>|<b>_</b>|<br>")
+    .append("|<b>_</b>|<b>_</b>|<b>_</b>|<b>_</b>|<b>_</b>|<b>_</b>|<b>_</b>|<b>_</b>|<br>")
+    .append("|<b>_</b>|<b>_</b>|<b>_</b>|<b>_</b>|<b>_</b>|<b>_</b>|<b>_</b>|<b>_</b>|<br>")
+    .append("|<b>_</b>|<b>_</b>|<b>_</b>|<b>_</b>|<b>_</b>|<b>_</b>|<b>_</b>|<b>_</b>|");
     flag1 = 1;
   }
 
-  $("section:eq(5) > b").bind("click", function(ev){
-    if(counter %2==0)
-      $(this).empty().append("c");
-    else
-      $(this).empty().append("s");
-    counter+=1;
-  });
-  $("section:eq(5) > b").bind("contextmenu", function(ev){
-    ev.preventDefault();
-    return false;
+  $("section#othello > div > b").bind("click", function(ev){
+    var char = $(this).text();
+    if(counter % 2 == 0 && char == '_'){
+      $(this).empty().append("o");
+      counter += 1;
+    }
+    else if(counter % 2 == 1 && char == '_'){
+      $(this).empty().append("x");
+      counter += 1;
+    }
   });
 }
